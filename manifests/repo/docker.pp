@@ -19,7 +19,7 @@ class yum::repo::docker (
     validate_re(
       $baseurl,
       '^(?:https?|ftp):\/\/[\da-zA-Z-][\da-zA-Z\.-]*\.[a-zA-Z]{2,6}\.?(?:\:[0-9]{1,5})?(?:\/[\w~-]*)*$',
-      '$mirror_url must be a Clean URL with no query-string, a fully-qualified hostname and no trailing slash.'
+      '$baseurl must be a Clean URL with no query-string, a fully-qualified hostname and no trailing slash.'
     )
     $url = $baseurl
   } else {
