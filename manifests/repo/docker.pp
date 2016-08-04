@@ -23,7 +23,7 @@ class yum::repo::docker (
     )
     $url = $baseurl
   } else {
-    $url = "https://yum.dockerproject.org/repo/$stability/$release/$releasever"
+    $url = "https://yum.dockerproject.org/repo/$stability/$release/\$releasever"
   }
 
   yum::managed_yumrepo { 'docker':
